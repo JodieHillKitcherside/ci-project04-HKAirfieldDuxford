@@ -17,5 +17,22 @@ class FlightOption(models.Model):
     destination_airfield = models.DurationField()
 
     def _str_(self):
-        return f"{self.departure_airfield} to {self.destination_airfield}"
+        return f"{self.departure_airfield} to {self.destination_airfield}
 
+class Booking(models.Model):
+    user = models.ForeginKey(User, on_delete=models.CASCADE)
+    flight = models.ForeginKey(User, on_delete=models.CASCADE)
+    aircraft = models.ForeginKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+    total_cost = models.DecimalField(max_digits=10, decimal_places=2)
+    payment_status = models.BooleanField(default=False)
+
+    def get_total_cost(self):
+        return self.aircraft.cost_per_hour * self.flight.flight_duration.total_seconds()/ 3600
+
+    def save(self, *args, **kwargs):
+        self.total_cost = self.get._total_cost()
+        super().save(*args, **kwargs)
+    
+    def _str_(self):
+        return f"Booking {self.id} by {self.user.name}" 
