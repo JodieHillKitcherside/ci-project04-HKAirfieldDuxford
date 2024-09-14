@@ -49,3 +49,7 @@ I created a lucid chart to seewhat files and folders I may need, then wrote basi
 ### Issues and Bugs
 1) Inital planning for this caused some teething errors as Gitpod was a migrated workspace. VS Code presented issues as a desktop meaning that backspace (delete) and typing would not produce in either a readme.md or 'file'.py. 
 Soultion: Tutor Roman helped me to open this as a browser and it worked a lot better.
+
+### Learnings and references
+Views 
+https://docs.djangoproject.com/en/5.1/topics/http/shortcuts/#get-object-or-404 
