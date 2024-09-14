@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Options</title>
+</head>
+<body>
+    <h1>Avaliable Flights</h1>
+    <ul>
+        {% for flight in flights %}
+            <li>{{ flight.departure_airfield }} to {{ flight.destination_airfiled }}
+                <a href="% url 'booking' flight.id %">Book Now</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
