@@ -23,4 +23,22 @@ def booking_view(request, flight_id):
             form = BookingForm(inital='{flight': flight})
         return render(request, 'booking.html', {'form': form, 'flight': flight})
 
+def payment_view(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        form = PaymentForm(request.POST)
+        if form.is.valid():
+            payment = form.save(commit=False)
+            pament.booking = booking
+            payment.save()
+            booking.payment_staus = True
+            booking.save()
+            return redirect('confirmation', booking_id=booking.id)
         
+        else:
+            form = PaymentForm(initial={'amount': booking.total_cost})
+        return render(request, 'payment.html', {'form': form, 'booking': booking})
+
+def confirmation_view(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    return(request, 'confirmation.html', {'booking': booking})

@@ -49,6 +49,7 @@ I created a lucid chart to seewhat files and folders I may need, then wrote basi
 ### Issues and Bugs
 1) Inital planning for this caused some teething errors as Gitpod was a migrated workspace. VS Code presented issues as a desktop meaning that backspace (delete) and typing would not produce in either a readme.md or 'file'.py. 
 Soultion: Tutor Roman helped me to open this as a browser and it worked a lot better.
+2) When creating classes, I had to double check capitals, paraentheses and spacing would not cause any errors and did this through manual eye testing before I set up any automated testing. There were lots on instaces with repeating words and cimlar word classes so I had to be very sure. 
 
 ### Learnings and references
 Views 
