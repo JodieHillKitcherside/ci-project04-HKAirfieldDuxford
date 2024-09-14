@@ -37,6 +37,10 @@ This also meant that in the real world, I could provide software experience to a
 
 ### Planning 
 
+I first outset to create a basic template for an aircraft website through django that funcationally worked and was rid of any errors, then wuld add extar functions and tailor design. 
+
+I created a lucid chart to seewhat files and folders I may need, then wrote basic user stories to understand what I might need to execute this template, then from the user stories added another lucid chart to map out key classes and functions for each step. 
+
 #### Kanban 
 
 #### User Stores 
