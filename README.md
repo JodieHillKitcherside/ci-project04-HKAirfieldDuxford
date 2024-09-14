@@ -47,7 +47,7 @@ I created a lucid chart to seewhat files and folders I may need, then wrote basi
 
 ### Authenitcation
 This system was created to allow the user to manage their own registration, login and logout function easily. 
-First, I added a user registration form class, then added views and routes for registration, login and log out, 
+First, I added a user registration form class, then added views and routes for registration, login and log out, added register and login html and then went on to protect views with the login required decorator and redirect non-authenicated users if they try toaccess this. 
 
 ### Issues and Bugs
 1) Inital planning for this caused some teething errors as Gitpod was a migrated workspace. VS Code presented issues as a desktop meaning that backspace (delete) and typing would not produce in either a readme.md or 'file'.py. 

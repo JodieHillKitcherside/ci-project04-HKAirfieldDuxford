@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm 
 from .forms import UserRegistrationForm
+from django.contrib.auth.decorators import login required
 
 def home(request):
     return render(request, 'home.html')
@@ -14,6 +15,7 @@ def flight_options(request):
     flights = FlightOption.objects.all()
     return render(request, 'flight_options.html', {'flights': flights})
 
+@login_required
 def booking_view(request, flight_id):
     flight = get_object_or_404(FlightOption, id=flight_id)
     if request.method == 'POST':
@@ -26,7 +28,9 @@ def booking_view(request, flight_id):
         else:
             form = BookingForm(inital='{flight': flight})
         return render(request, 'booking.html', {'form': form, 'flight': flight})
+    pass
 
+@login_required
 def payment_view(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':
@@ -42,6 +46,7 @@ def payment_view(request, booking_id):
         else:
             form = PaymentForm(initial={'amount': booking.total_cost})
         return render(request, 'payment.html', {'form': form, 'booking': booking})
+pass 
 
 def confirmation_view(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
@@ -80,3 +85,5 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+
