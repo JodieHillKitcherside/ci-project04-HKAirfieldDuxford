@@ -24,3 +24,8 @@ Providing an edition for an already functioning business, that I could see a val
 
 This also meant that in the real world, I could provide software experience to a real cause and need that would potentially add revnue, customer experience and authenitcity to the company.
 
+
+
+### Issues and Bugs
+1) Inital planning for this caused some teething errors as Gitpod was a migrated workspace. VS Code presented issues as a desktop meaning that backspace (delete) and typing would not produce in either a readme.md or 'file'.py. 
+Soultion: Tutor Roman helped me to open this as a browser and it worked a lot better. 
