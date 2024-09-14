@@ -1,4 +1,5 @@
 from django import forms
+from .models import Booking, Payment
 
 class BookingForm(forms.ModelForm):
     date = forms.DateField(widget=forms.SelectDateWidget)
