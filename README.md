@@ -54,3 +54,5 @@ Soultion: Tutor Roman helped me to open this as a browser and it worked a lot be
 ### Learnings and references
 Views 
 https://docs.djangoproject.com/en/5.1/topics/http/shortcuts/#get-object-or-404 
+Settings
+https://docs.djangoproject.com/en/5.1/topics/auth/
