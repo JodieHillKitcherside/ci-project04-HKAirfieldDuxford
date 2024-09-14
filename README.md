@@ -60,3 +60,5 @@ Views
 https://docs.djangoproject.com/en/5.1/topics/http/shortcuts/#get-object-or-404 
 Settings
 https://docs.djangoproject.com/en/5.1/topics/auth/
+Authentication
+https://www.educative.io/answers/what-is-a-csrf-token-in-django
