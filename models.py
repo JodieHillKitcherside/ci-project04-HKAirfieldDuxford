@@ -11,3 +11,11 @@ class Aircaft(models.Model):
     def _str_(self):
         return self.name 
 
+class FlightOption(models.Model):
+    aircraft = models.ForeginKey(Aircaft, on_delete=models.CASCASE)
+    departure_airfield = models.CharField(max_length=100)
+    destination_airfield = models.DurationField()
+
+    def _str_(self):
+        return f"{self.departure_airfield} to {self.destination_airfield}"
+
