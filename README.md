@@ -45,11 +45,14 @@ I created a lucid chart to seewhat files and folders I may need, then wrote basi
 
 #### User Stores 
 
+### Authenitcation
+
 
 ### Issues and Bugs
 1) Inital planning for this caused some teething errors as Gitpod was a migrated workspace. VS Code presented issues as a desktop meaning that backspace (delete) and typing would not produce in either a readme.md or 'file'.py. 
 Soultion: Tutor Roman helped me to open this as a browser and it worked a lot better.
 2) When creating classes, I had to double check capitals, paraentheses and spacing would not cause any errors and did this through manual eye testing before I set up any automated testing. There were lots on instaces with repeating words and simlar word classes so I had to be very sure. Even seeing a red ( meant I was looking for the issues and noticed I am getting quicker at seeing the lack of a closed ' or wrong lower case.
+3) Could not open a port, turns out I had not installed the right dependancies or a requirements.txt file. I needed to go back to the Code Institute's Blog Walkthrough to check how this was done. 
 
 ### Learnings and references
 Views 
