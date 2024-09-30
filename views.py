@@ -26,7 +26,7 @@ def booking_view(request, flight_id):
             return redirect('payment', booking_id=booking.id)
         
         else:
-            form = BookingForm(inital='{flight': flight})
+            form = BookingForm(inital={'flight': flight})
         return render(request, 'booking.html', {'form': form, 'flight': flight})
     pass
 
